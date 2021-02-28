@@ -28,3 +28,46 @@ class arrivalsContent (models.Model):
     image = models.ImageField()
 
     sortType = models.CharField(max_length=20,default="*")
+
+class hotsale(models.Model):
+    image = models.ImageField()
+    headline = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    original_price = models.FloatField()
+    offer_price = models.FloatField()
+
+class MENS_catogery (models.Model):
+    title = models.CharField(max_length=30)
+
+    price = models.FloatField()
+
+    image = models.ImageField()
+
+    sortType = models.CharField(max_length=20,default="*")
+
+class WOMENS_catogery (models.Model):
+    title = models.CharField(max_length=30)
+
+    price = models.FloatField()
+
+    image = models.ImageField()
+
+    sortType = models.CharField(max_length=20,default="*")
+
+class KIDS_catogery (models.Model):
+    title = models.CharField(max_length=30)
+
+    price = models.FloatField()
+
+    image = models.ImageField()
+
+    sortType = models.CharField(max_length=20,default="*")
+
+class FOOTWEAR_catogery (models.Model):
+    title = models.CharField(max_length=30)
+
+    price = models.FloatField()
+
+    image = models.ImageField()
+
+    sortType = models.CharField(max_length=20,default="*")

@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %} {% block content %}
+
+<body>
+
+    <div id="wrapper">
+        {% include 'base/headder.html'%}
+       
+        <section class="new_arrivals_area section_padding_100_0 clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section_heading text-center">
+                            <h2>MENS</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="karl-projects-menu mb-100">
+                <div class="text-center portfolio-menu">
+
+                    <button class="btn active" data-filter="*">ALL</button> {% for name in mens %}
+                    <button class="btn" data-filter=".{{name.title}}">{{name.title}}</button> {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row karl-new-arrivals">
+
+                    <!--  new product Single gallery Item Start -->
+                    {% for item in mens %}
+                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item {{item.sortType}} wow fadeInUpBig" style="min-height: 320px;" data-wow-delay="0.2s">
+                        <!-- Product Image -->
+                        <div data-toggle="modal" data-target="#quickview" class="product-img newImg">
+
+                            <img src="{{item.image.url}}" style="max-width: 540px; max-height: 320px; object-fit: cover;" alt="">
+                     
+                        </div>
+                        <!-- Product Description -->
+                        <div class="product-description">
+                            <h4 class="product-price">{{ item.price }}</h4>
+                            <p>{{item.title}}</p>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </section>
+    </div>
+    {% endblock%}
+</body>

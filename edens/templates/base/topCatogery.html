@@ -1,0 +1,16 @@
+<section class="top_catagory_area row d-md-flex  clearfix" style="max-width: 100vw;">
+    <!-- Single Catagory -->
+  
+        {% for x in inner %}
+        <div class="single_catagory_area col-md-6 align-items-center bg-img"
+            style="background-image: url({{x.image.url}});">
+            <div class="catagory-content">
+                <h6></h6>
+                <h2 style="color: {{x.color}};">{{x.title}}</h2>
+                <a href="#" class="btn karl-btn">SHOP NOW</a>
+            </div>
+        </div>
+        {% endfor %}
+    
+   
+</section>

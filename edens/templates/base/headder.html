@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-LIGHT fixed-top nav-color">
+  <a class="navbar-brand" href="#">EDENS CLOTHINGS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'mens' %}">MENS</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'womens' %}">WOMEN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'kids' %}">KIDS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'footwears' %}">FOOTWEARS</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  <div class="header-cart-menu d-flex align-items-center ml-auto">
+    <!-- Cart Area -->
+    <div class="cart">
+      <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i>
+        Your Bag $20</a>
+      <!-- Cart List Area Start -->
+      <ul class="cart-list">
+        <li>
+          <a href="#" class="image"><img src="img/product-img/product-10.jpg" class="cart-thumb" alt=""></a>
+          <div class="cart-item-desc">
+            <h6><a href="#">Women's Fashion</a></h6>
+            <p>1x - <span class="price">$10</span></p>
+          </div>
+          <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
+        </li>
+        <li>
+          <a href="#" class="image"><img src="img/product-img/product-11.jpg" class="cart-thumb" alt=""></a>
+          <div class="cart-item-desc">
+            <h6><a href="#">Women's Fashion</a></h6>
+            <p>1x - <span class="price">$10</span></p>
+          </div>
+          <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
+        </li>
+        <li class="total">
+          <span class="pull-right">Total: $20.00</span>
+          <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
+          <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
